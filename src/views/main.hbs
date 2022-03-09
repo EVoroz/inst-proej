@@ -1,19 +1,23 @@
 <h6>Главная страница</h6>
-
+<div class="text-center">
+	<img src="img/instagram-brands.svg" width="100px" height="100px">
+</div>
 
 <div class="row">
-    
-        <h2 class="text-center">Instagram</h2>
-    </div>
 
-   
-    
+	<h2 class="text-center">Instagram</h2>
+
+
+</div>
+
+
+
 <div class="d-flex justify-content-center">
-	<form class="d-flex flex-column align-items-rigth" action="/lentapost" method="POST" >
-    <div class="mb-3">
-        <img  class="img-fluid">
-        <input name="photo" placeholder="Ваше фото"  class="form-control">
-    </div>
+	<form class="d-flex flex-column align-items-rigth" action="/lentapost" method="POST">
+		<div class="mb-3">
+			<img class="img-fluid">
+			<input name="photo" placeholder="Ваше фото" class="form-control">
+		</div>
 		<div class="mb-3">
 			<input name="name" placeholder="Ваше имя" type="text" class="form-control">
 		</div>
@@ -27,22 +31,24 @@
 
 <hr />
 
-<section class="d-flex ml-3 justify-content-space-evenly">
-	{{#each listOfPeople}}
-		<div class="card my-2" style="width: 18rem;">
-            <img src="{{this.photo}}" class="card-img-top" >
-			<div class="card-body">
-				<h5 class="card-title">{{this.name}}</h5>
-				<p class="card-text">{{this.post}}</p>
+
+<section class="d-flex">
+
+	<div class="grid">
+
+		{{#each listOfPeople}}
+		<div class="cardd">
+			<div class="card my-2" width="200px">
+				<img src="{{this.photo}}" class="card-img-top mt-3" class="poto">
+				<div class="card-body">
+					<h5 class="card-title">{{this.name}}</h5>
+					<p class="card-text">{{this.post}}</p>
+				</div>
 			</div>
 		</div>
-	{{/each}}
-	
 
+		{{/each}}
 
-	
+	</div>
+
 </section>
-
-
-
-

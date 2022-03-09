@@ -1,5 +1,5 @@
 const db = {
-    people: [
+    peoples: [
       {
         photo:'https://kulturologia.ru/files/u18214/portrait68.jpg',
         name: 'Пупкина Ирина',
