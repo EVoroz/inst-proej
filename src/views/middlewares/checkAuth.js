@@ -1,14 +1,17 @@
-//const { sessions } = require('../../sessions')
+// const { sessions } = require('../../sessions')
 
 const checkAuth = (req, res, next) => {
-   // const sidFromPeople = req.cookies.sid
-const currentPeople = req.session?.people
-   // if (sessions[sidFromPeople]) {
-       if(currentPeople) {
-        return next()
-    }
-    return res.redirect('/auth/signin')
+  const currentUser = req.session?.user
+
+  if (currentUser) {
+    /* const sidFromUser = req.cookies.sid
+  if (sessions[sidFromUser]) */
+    return next()
+  }
+
+  return res.redirect('/auth/signin')
 }
+
 module.exports = {
-    checkAuth,
+  checkAuth,
 }

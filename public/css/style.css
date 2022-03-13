@@ -10,7 +10,22 @@ body{
 }
 
 .cardd {
-    border-radius: 10px;
-    padding: 30px;
-
+    border:2px ;
+    padding: 10px;
+    width: 380px;
+     height: 500px;
+     overflow-y: scroll;
 }
+
+ .card-img, .card-img-top {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;   
+    
+}
+
+
+
+
+
+

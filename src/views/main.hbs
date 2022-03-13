@@ -1,4 +1,7 @@
-<h6>Главная страница</h6>
+<button data-fetch>
+	Fetch
+</button>
+
 <div class="text-center">
 	<img src="img/instagram-brands.svg" width="100px" height="100px">
 </div>
@@ -32,21 +35,23 @@
 <hr />
 
 
-<section class="d-flex">
 
+<section data-card >
 	<div class="grid">
-
 		{{#each listOfPeople}}
 		<div class="cardd">
-			<div class="card my-2" width="200px">
-				<img src="{{this.photo}}" class="card-img-top mt-3" class="poto">
+			<div data-id="{{this.id}}" class="card my-2" >
+				<img src="{{this.photo}}" class="card-img-top mt-2" class="photo" >
+
 				<div class="card-body">
 					<h5 class="card-title">{{this.name}}</h5>
 					<p class="card-text">{{this.post}}</p>
+					<button data-action="delete" type="submit" class="btn btn-dark">Удалить</button>
+					
+
 				</div>
 			</div>
 		</div>
-
 		{{/each}}
 
 	</div>
